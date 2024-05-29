@@ -15,11 +15,14 @@
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
 		"prepare": "husky",
+		"dev:android": "pnpm run dev --host 0.0.0.0 && cap sync android && cap open android",
 		"preinstall": "npx only-allow pnpm"
 	},
 	"devDependencies": {
+		"@capacitor/cli": "^6.0.0",
+		"@fontsource/poppins": "^5.0.14",
 		"@playwright/test": "^1.44.1",
-		"@sveltejs/adapter-auto": "^3.2.1",
+		"@sveltejs/adapter-static": "^3.0.1",
 		"@sveltejs/kit": "^2.5.10",
 		"@sveltejs/vite-plugin-svelte": "4.0.0-next.3",
 		"@types/eslint": "^8.56.10",
@@ -52,5 +55,10 @@
 		"yarn": "please-use-pnpm",
 		"pnpm": ">=9.0.0",
 		"node": ">=18.13.0"
+	},
+	"dependencies": {
+		"@capacitor/android": "^6.0.0",
+		"@capacitor/core": "^6.0.0",
+		"@capacitor/ios": "^6.0.0"
 	}
 }
